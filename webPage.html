@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beautiful Responsive Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      color: #333;
+      line-height: 1.6;
+      padding-top: 90px;
+    }
+
+
+    nav {
+      background-color: #ffffffdd;
+      padding: 15px 20px;
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      width: 95%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    nav li {
+      list-style: none;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #d0342c;
+    }
+
+
+    header {
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 1000px;
+      background: #fff;
+      border: 1px solid #ffb3b3;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      color: #8B4513;
+      margin-bottom: 15px;
+    }
+    header section {
+      padding: 10px;
+    }
+    header p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+
+    aside {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 450px;
+      background: #fff;
+      border: 1px solid #ffb3b3;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      float: right;
+      margin-right: 50px;
+    }
+
+
+    article {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1000px;
+      background: #fff;
+      border: 1px solid #ffb3b3;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+
+    .a1 { color: rgb(133, 127, 255); }
+    .a2 { color: lightcoral; }
+
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 15px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+
+    button {
+      background: linear-gradient(135deg, #007BFF, #0056b3);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    button:hover {
+      background: linear-gradient(135deg, #0056b3, #007BFF);
+      transform: translateY(-2px);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+    button a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    @media (max-width: 768px) {
+      aside {
+        float: none;
+        max-width: 90%;
+        margin: 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Webpage</a></li>
+      <li><a href="#">Forms</a></li>
+      <li><a href="#">List</a></li>
+    </ul>
+  </nav>
+  
+  <div class="clearfix">
+    <header>
+      <h1>Webpage</h1>
+      <section>
+        <h1>Header</h1>
+        <p class="a2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quas corrupti harum qui distinctio consequatur ipsum repellat perferendis voluptates vitae, est nemo voluptatibus ea natus quaerat officiis et praesentium!
+        </p>
+      </section>
+    </header>
+    
+    <aside>
+      <h1>Aside</h1>
+      <p class="a1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quas corrupti harum qui distinctio consequatur ipsum repellat perferendis voluptates vitae, est nemo voluptatibus ea natus quaerat officiis et praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quas corrupti harum qui distinctio consequatur ipsum repellat perferendis voluptates vitae, est nemo voluptatibus ea natus quaerat officiis et praesentium!
+      </p>
+    </aside>
+    
+    <article>
+      <h1>Article 1</h1>
+      <p class="a1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quas corrupti harum qui distinctio consequatur ipsum repellat perferendis voluptates vitae, est nemo voluptatibus ea natus quaerat officiis et praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quas corrupti harum qui consequatur ipsum repellat perferendis voluptates vitae, est nemo voluptatibus ea natus quaerat officiis et praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis quas corrupti harum qui distinctio consequatur ipsum repellat perferendis voluptates vitae, est nemo voluptatibus ea natus quaerat officiis et praesentium!
+      </p>
+    </article>
+  </div>
+  
+  <!-- Button Grid -->
+  <div class="button-container">
+    <button><a href="Assignment 5 Table.HTML">Click here to open the table</a></button>
+    <button><a href="Assignment 6 Float.html">Click to open the pickup float paragraph</a></button>
+    <button><a href="Assignment 7 Flexbox.html">Click to open Flexbox</a></button>
+    <button><a href="Assignment 8 grid.html">Click to open grid</a></button>
+    <button><a href="Assignment 9 Pseudo.html">Click to open Pseudo class</a></button>
+    <button><a href="Assignment 5 List.HTML">Click to open List</a></button>
+    <button><a href="assignment 3 (Form).HTML">Click to Form</a></button>
+    <button><a href="Assignment 10 Animations.HTML">Click to Animation</a></button>
+  </div>
+</body>
+</html>

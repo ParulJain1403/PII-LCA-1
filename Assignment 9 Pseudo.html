@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Styled Page</title>
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        /* Custom Text Selection */
+        ::selection {
+            background-color: #ff6b81;
+            color: #fff;
+        }
+        
+        /* Container Styling */
+        .container {
+            width: 85vw;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Paragraph Styling */
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        p:first-child {
+            font-weight: bold;
+            position: relative;
+            padding-left: 40px;
+        }
+        p:first-child::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.8em;
+            color: #ff6b81;
+        }
+        p::first-line {
+            color: #ff6b81;
+            font-weight: bold;
+        }
+        p:hover {
+            color: #ff4757;
+        }
+        
+        /* Link Styling with pseudo-element underline */
+        a {
+            text-decoration: none;
+            color: #ff4757;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #007acc;
+            transition: width 0.3s ease;
+        }
+        a:hover {
+            color: #007acc;
+        }
+        a:hover::after {
+            width: 100%;
+        }
+        
+        /* Button Styling */
+        button {
+            background: linear-gradient(135deg, #ff6b81, #ff4757);
+            color: #fff;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background: linear-gradient(135deg, #ff4757, #e63946);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        button:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                width: 90vw;
+                padding: 30px;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>This is an example paragraph to demonstrate pseudo-elements and pseudo-classes.</p>
+        <p>Hover over the <a href="#">link</a> or focus on the button below.</p>
+        <button>Click Me</button>
+    </div>
+</body>
+</html>

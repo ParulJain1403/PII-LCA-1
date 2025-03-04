@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pikachu & Pokeball Layout</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4500;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      background: white;
+      border: 2px solid #ff6b6b;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container:hover {
+      transform: scale(1.02);
+    }
+
+    .container img {
+      border-radius: 15px;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container img:hover {
+      transform: scale(1.1);
+    }
+
+    .image-left {
+      flex: 0 0 220px;
+      height: 220px;
+      margin-right: 20px;
+    }
+
+    .image-right {
+      flex: 0 0 280px;
+      height: 220px;
+      margin-left: 20px;
+    }
+
+    .text {
+      flex: 1;
+      min-width: 250px;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .image-left, .image-right {
+        margin: 0 0 15px 0;
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Pikachu & Pokeball Layout</h1>
+  
+  <div class="container">
+    <img src="pikachu-png-transparent-0.png" alt="Pikachu" class="image-left">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorem minima accusantium ad, ea soluta in laborum, natus alias hic facere facilis iure ex quae! Repellendus ut veritatis natus voluptate!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rem corrupti nihil excepturi illum autem, molestias labore soluta atque in dolor cumque, laudantium ad assumenda vel nostrum nobis sapiente exercitationem!</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illum accusamus eaque! Et, magnam sint quaerat porro perferendis voluptas praesentium harum itaque labore aliquam mollitia numquam inventore modi. Quae, officiis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, aut, quisquam dignissimos, quos repellendus at quaerat possimus perspiciatis provident ipsum tempore fuga veniam iure repudiandae. Accusantium, excepturi non! Ipsum, nostrum.</p>
+    </div>
+    <img src="png-clipart-pokeball-pokeball.png" alt="Pokeball" class="image-right">
+  </div>
+</body>
+</html>

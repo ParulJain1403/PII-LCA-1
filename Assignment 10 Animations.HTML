@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms, Transitions & Animations</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            text-align: center;
+            flex-direction: column;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.4s ease-in-out;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .scale-button { background: #4CAF50; }
+        .scale-button:hover { transform: scale(1.2); background: #45a049; }
+        .rotate-button { background: #2196F3; }
+        .rotate-button:hover { transform: rotate(360deg); background: #1976D2; }
+        .translate-button { background: #FF5722; }
+        .translate-button:hover { transform: translateX(20px); background: #E64A19; }
+        .skew-button { background: #9C27B0; }
+        .skew-button:hover { transform: skewX(20deg); background: #7B1FA2; }
+        
+        .box, .fade-box, .rotate-animation {
+            margin: 20px auto;
+            width: 140px;
+            height: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .box {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .fade-box {
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            animation: fadeInOut 3s infinite;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .rotate-animation {
+            background: linear-gradient(135deg, #ffb347, #ffcc33);
+            animation: rotate 3s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Transforms, Transitions & Animations</h1>
+        
+        <button class="scale-button">Scale</button>
+        <button class="rotate-button">Rotate</button>
+        <button class="translate-button">Translate</button>
+        <button class="skew-button">Skew</button>
+        
+        <div class="box">Bounce</div>
+        <div class="fade-box">Fade</div>
+        <div class="rotate-animation">Rotate</div>
+    </div>
+</body>
+</html>

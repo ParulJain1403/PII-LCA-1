@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Orders Table</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+      font-size: 2em;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    
+    th {
+      background-color: #01476f;
+      color: #fff;
+      font-size: 1.2em;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    tr.active {
+      background-color: #7ac6f2;
+      font-weight: bold;
+    }
+    
+    tr:hover {
+      background-color: #d1eaff;
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coffee Orders</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Cups</th>
+        <th>Types of Coffee</th>
+        <th>Sugar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="parul">Parul</td>
+        <td>10</td>
+        <td>Espresso</td>
+        <td>No</td>
+      </tr>
+      <tr class="active">
+        <td>Parag</td>
+        <td>3</td>
+        <td>Double Espresso</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Rishika</td>
+        <td>5</td>
+        <td>Frappe</td>
+        <td>No</td>
+      </tr>
+      <tr class="active">
+        <td>Devika</td>
+        <td>2</td>
+        <td>Cappuccino</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
